@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+                flex-direction: column;
+            }
+            #game {
+                border: 3px solid black;
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            }
+            #score {
+                font-size: 2em;
+                margin-bottom: 20px;
+                color: #333;
+                font-family: 'Press Start 2P', cursive;
+            }
+            #instructions { /* Add this block to style the instructions */
+                font-size: 1em;
+                margin-top: 20px;
+                color: #333;
+                font-family: 'Press Start 2P', cursive;
+                text-align: center;
+            }
+            #playAgain { /* Add this block to style the "Play Again" button */
+                display: none;
+                font-size: 1.5em;
+                color: #fff;
+                background-color: #333;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin-top: 20px;
+                cursor: pointer;
+                font-family: 'Press Start 2P', cursive;
+                text-transform: uppercase;
+            }
+            #playAgain:hover { /* Add this block to style the "Play Again" button when it's hovered over */
+                background-color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="score">Score: 0</div>
+        <canvas id="game" width="512" height="512"></canvas>
+        <div id="instructions"> <!-- Add this line to display the instructions -->
+            Use the arrow keys to move the snake. Eat the food to grow. Avoid the obstacles and don't run into yourself!
+        </div>
+        <button id="playAgain" style="display: none;">Play Again</button> <!-- Add this line to add a "Play Again" button -->
+        <script src="snake.js"></script>
+    </body>
+</html>
